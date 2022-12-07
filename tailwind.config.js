@@ -5,7 +5,8 @@ module.exports = {
 
   theme: {
     fontFamily: {
-      // sans: ['AvenirArabic'],
+       aven: ['AvenirArabic','sans-serif'],
+       inter: ['Inter','sans-serif'],
     },
     borderColor: (theme) => ({
       muted: 'var(--border-muted)',
@@ -84,7 +85,7 @@ module.exports = {
         '90px': '90px',
       },
       textColor: {
-        'base-color': 'var(--text-base)',
+        base: 'var(--text-base)',
         inverted: 'var(--text-inverted)',
         muted: 'var(--text-muted)',
         active: 'var(--text-active)',

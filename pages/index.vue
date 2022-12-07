@@ -1,25 +1,18 @@
 <template>
   <div>
-    <div class="flex bg-base">
-      <div class="min-h-fit w-[300px] rounded-[15px] bg-muted p-[20px]">
-        <!-- Start From Here -->
-        {{ $t('Start-from-here') }}
-      </div>
-      <div>
-        session
-        {{sessions.company_name}}
-
-      </div>
-    </div>
+    
   </div>
 </template>
 
 <script>
 export default {
-  components: {},
+  components: {
+    
+  },
   props: {},
   data() {
     return {
+      name: 'reslaan',
       sessions: [
         {
           company_name: 'Baraka (YC S21)',
