@@ -17,17 +17,22 @@
     </div>
     
     <client-only>
-      
-    <Nav />
+     
+        
 
-      <div class="justify container mx-auto flex flex-col items-center gap-[40px] pt-[100px]">
-        <div></div>
-        <div >
-          <Nuxt />
-        </div>
+      <div class="flex flex-col justify-center  h-screen ">
+                    <Nav />
+
+        
+                    <Nuxt />
+
+        
       </div>
+      
+      
+       
     </client-only>
-    <div
+    <!-- <div
       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
       <svg
         class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
@@ -42,12 +47,13 @@
           </linearGradient>
         </defs>
       </svg>
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 
+// import icon from '../components/Icon.global..vue'
 
 export default {
   components: {

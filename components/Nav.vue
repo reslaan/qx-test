@@ -1,21 +1,24 @@
 <template>
-  <header>
-    <div class="relative  z-20">
+  <header class="" >
+    <div class="container mx-auto tablet:w-3/4">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
-            <a href="#">
-              <span class="sr-only">Your Company</span>
-              <img class="h-8 w-auto sm:h-10" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                alt="">
-            </a>
+            
+            <iconsQewamLogo></iconsQewamLogo>
           </div>
 
 
-          <div class=" items-center justify-end md:flex md:flex-1 ">
-            <button class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+          <div class="flex items-center justify-between space-x-2  ">
+            <button class="rtl:ml-2">
+                          <!-- <iconsSun class="text-active"></iconsSun> -->
+                          <iconsMoon class="text-base hover:text-muted" ></iconsMoon>
+            </button>
+
+            <button class="whitespace-nowrap text-base font-medium  hover:text-muted"
               @click="changeLanguage">
-              {{ $t('language') }}</button>
+              {{ $t('language') }}
+            </button>
           </div>
         </div>
       </div>

@@ -17,10 +17,9 @@ module.exports = {
     }),
 
     screens: {
-      xs: '375px',
-      sm: '768px',
-      lg: '1024px',
-      xl: '1032px',
+      mobile: '375px',
+      tablet: '768px',
+      desktop: '1024px',
     },
     colors: {
       // Primary Colors
@@ -78,12 +77,7 @@ module.exports = {
       hover: 'var(--bg-hover)',
     },
     extend: {
-      spacing: {
-        340: '340px',
-        '2px': '2px',
-        '19px': '-19px',
-        '90px': '90px',
-      },
+    
       textColor: {
         base: 'var(--text-base)',
         inverted: 'var(--text-inverted)',
