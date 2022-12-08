@@ -1,5 +1,5 @@
 <template>
-  <div class="isolate ">
+  <div>
     <div class="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
       <svg
         class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -15,22 +15,18 @@
         </defs>
       </svg>
     </div>
-    
+
     <client-only>
-     
-        
 
-      <div class="flex flex-col justify-center  h-screen ">
-                    <Nav />
 
-        
-                    <Nuxt />
 
-        
+      <div class="flex flex-col justify-center  min-h-screen ">
+        <Nav />
+        <Nuxt />
       </div>
-      
-      
-       
+
+
+
     </client-only>
     <!-- <div
       class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
@@ -57,18 +53,18 @@
 
 export default {
   components: {
-  
+
   },
   props: {
-    name:{
+    name: {
       type: String,
       default: 'reslaan'
     }
   },
-  
- 
+
+
   mounted() {
-   
+
   },
   // methods: {
   //   changeLanguage() {
