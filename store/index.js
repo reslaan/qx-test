@@ -1,8 +1,9 @@
 // const lang = localStorage.setItem('lang','ar')
 import moment from 'moment';
 
-export default{
+export default {
   state:{
+    selected_day:'',
     days: [
         {
           name:moment().calendar().split("at")[0],
@@ -41,6 +42,7 @@ export default{
         company_description: 'Investing. Empowered.',
         start_date: moment().hours(11).minute(0),
         end_date: moment().hour(11).minute(30),
+        current_date: moment(),
 
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
@@ -97,8 +99,8 @@ export default{
           'https://images.unsplash.com/photo-1633419461186-7d40a38105ec',
         company_description:
           'Lorem ipsum dolor sit amet  elit. ',
-          start_date: moment().add(3,'d').hours(14).minute(0),
-          end_date: moment().add(3,'d').hour(14).minute(30),
+          start_date: moment().add(4,'d').hours(14).minute(0),
+          end_date: moment().add(4,'d').hour(14).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
@@ -132,6 +134,15 @@ export default{
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
     ],
-  }
+  },
+  mutations:{
+      SET_DAY(state,day){
+      state.selected_day = ''
+      }
+  },
+  actions:{
+
+  },
+  
 
 }

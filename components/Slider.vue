@@ -5,10 +5,10 @@
  <div class="flex justify-between items-center text-center px-3 py-2 m-2  rounded-lg transition ease-in-out delay-150">
         <button @click="prev"  :class="currentSlides[0] === 0 ?'text-muted cursor-not-allowed':'active:-translate-x-0.5 rtl:active:translate-x-0.5'"><IconsChevLeft ></IconsChevLeft></button>
 
-        <div v-for="(day,index) in $store.state.days" :key="day.date" v-show="currentSlides.includes(index)" 
-         @click="selectDay"
+        <div @click="passDay(day.date)" v-for="(day,index) in days" :key="day.date" v-show="currentSlides.includes(index)" 
+         
           class="group w-1/4 desktop:w-24 p-2 flex flex-col items-center justify-center  border-2 border-muted hover:border-primary active:border-primary cursor-pointer rounded-xl ">
-          <h4 class="text-base group-hover:text-active group-active:text-active active">{{day.name}} {{index}}</h4>
+          <h4 class="text-base group-hover:text-active group-active:text-active active">{{day.name}} </h4>
           <span class="bg-muted group-active:bg-primary group-hover:bg-primary w-1/2 mt-1 text-muted group-active:text-inverted group-hover:text-inverted rounded-lg ">{{day.date}}</span>
         </div>
        
@@ -32,6 +32,11 @@ export default{
       currentSlides:[0,1,2]
     }
    },
+   computed:{
+     days(){
+      return this.$store.state.days
+     }
+   },
    methods:{
     next(){
       if(this.currentSlides.findLast(ele => ele === 6))
@@ -47,6 +52,10 @@ export default{
     },
     selectDay(){
 
+    },
+    passDay(day)
+    {
+      this.$emit('selectedDay', day)
     }
    }
 }

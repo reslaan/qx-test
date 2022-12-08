@@ -1,9 +1,9 @@
 <template>
   <div>
 <!-- display sessions -->
-<div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-4 px-3 py-2 m-2">
+<div v-if="sessions"  class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-4 px-3 py-2 m-2">
         <!-- start card -->
-        <div v-for="session in $store.state.sessions" :key="session.company_name"  class="flex flex-col space-y-2 rounded-xl bg-muted p-2 hover:border-primary">
+        <div v-for="session in sessions" :key="session.company_name"   class="flex flex-col space-y-2 rounded-xl bg-muted p-2 hover:border-primary">
           <div class="flex  items-center space-x-2  leading-tight ">
             <div class=" w-14 h-14  rtl:ml-2">
               <img class="rounded-md" :src="session.company_logo" alt="">
@@ -57,6 +57,7 @@
         </div> -->
         <!-- end card -->
       </div>
+      <div v-else class=""></div>
   </div>
 </template>
 
@@ -64,10 +65,19 @@
 import moment from 'moment';
 
 export default{
+  props:['day'],
    data(){
   return {
    moment
   }
+   },
+   computed:{
+    sessions(){
+      const sessions = this.$store.state.sessions.filter(ele  => 
+        moment(ele.start_date).format('DD') === this.day
+      )
+      return sessions;
+    }
    }
 }
 </script>

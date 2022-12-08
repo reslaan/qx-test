@@ -14,10 +14,9 @@
           </button>
         </div>
       </div>
-
-      <slider></slider>
+      <slider @selectedDay="selected_day($event)"></slider>
       
-      <LazySessions/>
+      <LazySessions :day="selectedDay"/>
  
     </div>
 
@@ -34,7 +33,8 @@ export default {
   props: {},
   data() {
     return {
-      moment
+      moment,
+      selectedDay:moment().format('DD')
      
     }
   },
@@ -42,6 +42,11 @@ export default {
   computed: {},
   watch: {},
   mounted() { },
-  methods: {},
+  methods: {
+    selected_day(day)
+    {
+      this.selectedDay = day;
+    },
+  },
 }
 </script>
