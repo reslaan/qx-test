@@ -4,13 +4,13 @@
 <div class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-4 px-3 py-2 m-2">
         <!-- start card -->
         <div v-for="session in $store.state.sessions" :key="session.company_name"  class="flex flex-col space-y-2 rounded-xl bg-muted p-2 hover:border-primary">
-          <div class="flex items-center space-x-2  leading-tight ">
-            <div class="w-12 h-12 rounded-2xl  rtl:ml-2">
-              <img :src="session.company_logo" alt="">
+          <div class="flex  items-center space-x-2  leading-tight ">
+            <div class=" w-14 h-14  rtl:ml-2">
+              <img class="rounded-md" :src="session.company_logo" alt="">
             </div>
             <div class="">
-              <h3 class="text-base font-semibold">{{session.company_name}}</h3>
-              <span class="text-xs">{{session.company_description}}</span>
+              <h3 class="text-base font-semibold capitalize">{{session.company_name}}</h3>
+              <span class="text-xs line-clamp-1">{{session.company_description}}</span>
             </div>
           </div>
           <div class="text-muted flex items-center">

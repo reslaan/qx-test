@@ -72,7 +72,7 @@ export default{
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'pepsi بيبسي',
         company_logo:
           'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
         company_description:
@@ -82,49 +82,49 @@ export default{
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'discord',
         company_logo:
-          'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
+          'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7',
         company_description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
+          'Lorem ipsum dolor sit amet . ',
           start_date: moment().add(2,'d').hours(15).minute(0),
           end_date: moment().add(2,'d').hour(15).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'windows',
         company_logo:
-          'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
+          'https://images.unsplash.com/photo-1633419461186-7d40a38105ec',
         company_description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
+          'Lorem ipsum dolor sit amet  elit. ',
           start_date: moment().add(3,'d').hours(14).minute(0),
           end_date: moment().add(3,'d').hour(14).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'mercedes benz',
         company_logo:
-          'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
+          'https://images.unsplash.com/photo-1601888221673-626d26f726cd',
         company_description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
+          'Lorem ipsum dolor sit  adipisicing elit. ',
           start_date: moment().add(4,'d').hours(19).minute(0),
           end_date: moment().add(4,'d').hour(19).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'spotify ',
         company_logo:
-          'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
+          'https://www.freepnglogos.com/uploads/spotify-logo-png/spotify-icon-marilyn-scott-0.png',
         company_description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
+          'Lorem ipsum dolor  adipisicing elit. ',
           start_date: moment().add(5,'d').hours(9).minute(0),
           end_date: moment().add(5,'d').hour(9).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
-        company_name: 'Basket باسكت',
+        company_name: 'Amazon',
         company_logo:
-          'https://cdn2.hubspot.net/hub/145335/file-407359001-png/blog-files/pepsi.png',
+          'https://www.freepnglogos.com/uploads/amazon-png-logo-vector/amazon-icon-symbol-png-logo-21.png',
         company_description:
           'Lorem ipsum dolor sit amet consectetur adipisicing elit. ',
           start_date: moment().add(6,'d').hours(11).minute(0),
