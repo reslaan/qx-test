@@ -8,6 +8,7 @@
   "empty":"لا يوجد {action}  - إبدأ محادثة مع المرشد",
   "no-sessions":"لديك جلسات قادمة",
   "join":"انضمام",
-  "dismiss": "الغاء"
+  "dismiss": "الغاء",
+  "removed-session":"تم إزالة الجلسة"
 
 }

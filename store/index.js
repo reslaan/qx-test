@@ -2,7 +2,7 @@
 import moment from 'moment';
 export default {
   state:() => ({
-   zoom_link:'',
+  
     days: [
         {
           name:moment().calendar().split("at")[0],
@@ -135,10 +135,9 @@ export default {
     ],
   }),
   mutations:{
-    SET_ZOOM_LINK(state,link){
-      state.zoom_link = link
-      console.log('zoom loink')
-    }
+    REMOVE_SESSION(state, name) {
+      state.sessions = state.sessions.filter((session) => session.company_name !== name);
+    },
   },
   actions:{
 

@@ -22,67 +22,41 @@
           <span>{{ moment(session.end_date).format('LT') }}</span>
         </div>
         <div class="flex space-x-3 border-t border-muted w-1/2 pt-2">
-          <nuxt-link :to="{ name: 'session', params: { zoom_link: session.zoom_link }}" class="inline-block rounded-xl bg-primary hover:bg-hover focus:translate-y-0.5 px-4 py-1.5 text-inverted font-semibold leading-7  shadow-sm ">{{$t('join')}}</nuxt-link>
-          <button class="inline-block rounded-lg  px-4 py-1.5  font-semibold leading-7  ">{{$t('dismiss')}}</button>
+          <nuxt-link :to="{ name: 'session', params: { zoom_link: session.zoom_link } }"
+            class="inline-block rounded-xl bg-primary hover:bg-hover focus:translate-y-0.5 px-4 py-1.5 text-inverted font-semibold leading-7  shadow-sm ">{{ $t('join') }}</nuxt-link>
+          <button class="inline-block rounded-lg  px-4 py-1.5  font-semibold leading-7 focus:translate-y-0.5"
+            @click="remove_session(session.company_name)">{{ $t('dismiss') }}</button>
         </div>
       </div>
-      <!-- end card -->
-      <!-- start card -->
-      <!-- <div class="flex flex-col space-y-2 rounded-xl border border-muted p-2 hover:bg-muted">
-          <div class="flex items-center space-x-2  leading-tight ">
-            <div class="w-12 h-12 rounded-2xl bg-c-p-blue">
-            </div>
-            <div class="">
-              <h3 class="text-base font-semibold">Memorisely</h3>
-              <span class="text-xs">E-learning</span>
-            </div>
-          </div>
-          <div class="text-muted">
-            <span>&RightArrow;</span> <span>01:00 PM to 02:00 PM</span>
-          </div>
-        </div> -->
-      <!-- end card -->
-      <!-- start card -->
-      <!-- <div class="flex flex-col space-y-2 rounded-xl border border-muted p-2 hover:bg-muted">
-          <div class="flex items-center space-x-2  leading-tight ">
-            <div class="w-12 h-12 rounded-2xl bg-c-p-blue">
-            </div>
-            <div class="">
-              <h3 class="text-base font-semibold">Swvl</h3>
-              <span class="text-xs">The Evolution of Revolution</span>
-            </div>
-          </div>
-          <div class="text-muted">
-            <span>&RightArrow;</span> <span>02:30 PM to 03:00 PM</span>
-          </div>
-        </div> -->
-      <!-- end card -->
+
     </div>
+    
     <div v-else
       class="flex flex-col space-y-2 justify-center items-center text-center border border-muted rounded-lg w-full py-6 ">
       <div class="">
         <iconsEmpty></iconsEmpty>
       </div>
-    
+
 
       <i18n path="empty" tag="p">
-    
-    <template v-slot:action>
-      <strong >{{ $t('no-sessions') }}</strong>
-    </template>
-  </i18n>
+
+        <template v-slot:action>
+          <strong>{{ $t('no-sessions') }}</strong>
+        </template>
+      </i18n>
     </div>
   </div>
 </template>
 
 <script >
-import moment from 'moment';
-
+import moment from 'moment'
 export default {
   props: ['day'],
+  setup(){
+  },
   data() {
     return {
-      moment
+            moment,      
     }
   },
   computed: {
@@ -92,10 +66,12 @@ export default {
       )
       return sessions;
     }
+  },
+  methods: {
+    remove_session(name) {
+      this.$store.commit('REMOVE_SESSION', name)
+       setTimeout(function () { alert( 'session was removed'); }, 150);
+    }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

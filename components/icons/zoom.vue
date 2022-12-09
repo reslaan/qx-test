@@ -1,6 +1,6 @@
 <template>
   
-    <svg  data-name="Group 6799" xmlns="http://www.w3.org/2000/svg" width="35.758" height="35.758" viewBox="0 0 35.758 35.758">
+    <svg  data-name="Group 6799" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 35.758 35.758">
     <defs>
         <clipPath id="unhxdn00ba">
             <circle data-name="Ellipse 521" cx="17.879" cy="17.879" r="17.879" style="fill:none"/>

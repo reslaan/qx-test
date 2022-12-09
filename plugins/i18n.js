@@ -2,7 +2,6 @@ import Vue from 'vue'
 import VueI18n from 'vue-i18n'
 Vue.use(VueI18n)
 
-// localStorage.getItem('lang');
 export default ({ app }) => {
 
   // inject our i18n instance into the app root to be used in middleware

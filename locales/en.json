@@ -5,6 +5,7 @@
   "empty":"You have {action}  - start share a converstion with a mentor",
   "no-sessions":"no upcoming sessions",
   "join":"join",
-  "dismiss": "Dismiss"
+  "dismiss": "Dismiss",
+  "removed-session":"session was removed"
   
 }
