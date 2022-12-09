@@ -121,26 +121,26 @@
     --text-base: #fff;
     --text-inverted: #fff;
     --text-muted: #92929d;
-    --text-active: #0a66d2;
+    --text-active: #9484F7;
     --text-disabled: #545a60;
     --text-error: #e33737;
 
-    --border-muted: #302c2c;
+    --border-muted: #9297B729;
     --border-muted2: #3e3939;
     --border-muted-btn: #2f2d2d;
-    --border-primary: #0a66d2;
+    --border-primary: #9484F7;
     --border-inverted: #fff;
 
-    --bg-base: #121317;
-    --bg-muted: #1a1c23;
+    --bg-base: #1C1E2D;
+    --bg-muted: #282C41;
     --bg-muted2: #92929d;
     --bg-row: #242424;
-    --bg-active: #0060ef38;
-    --bg-hover: #545050;
+    --bg-active: #9484F7;
+    --bg-hover: #7f6fe7;
     --bg-disabled: #28292e;
     --bg-invertd: #fff;
 
-    --btn-primary: #0a66d2;
+    --btn-primary: #9484F7;
     --btn-secondary: #50a4ed;
   }
 }

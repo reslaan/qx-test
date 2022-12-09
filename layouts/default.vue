@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <div class="absolute  inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
       <svg
         class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
@@ -19,9 +19,8 @@
     <client-only>
 
 
-
-      <div class="flex flex-col justify-center  min-h-screen transition-all ">
-        <Nav @lang="lang($event)" />
+      <div class="flex flex-col justify-center bg-base text-base min-h-screen transition-all ">
+        <Nav  />
         <Nuxt />
       </div>
     </client-only>
@@ -33,7 +32,13 @@
 
 export default {
  
-
+data(){
+  return {
+  }
+},
+computed:{
+ 
+}
  
 }
 </script>

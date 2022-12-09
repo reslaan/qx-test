@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div >
     <!-- display sessions -->
     <div v-if="(sessions.length > 0)"
       class="grid grid-cols-1 tablet:grid-cols-2 desktop:grid-cols-3 gap-4 px-3 py-2 m-2">
       <!-- start card -->
-      <div as="button" v-for="session in sessions" :key="session.company_name"
-        class="flex flex-col space-y-2 rounded-xl hover:bg-muted focus:bg-muted p-2 border border-muted hover:border-white focus:border-">
+      <div   v-for="session in sessions" :key="session.company_name"
+        class="group flex flex-col space-y-2 rounded-xl hover:bg-muted focus:bg-muted p-2 border border-muted hover:border-base cursor-auto">
         <div class="flex  items-center space-x-2  leading-tight ">
           <div class=" w-14 h-14  rtl:ml-2">
             <img class="rounded-md" :src="session.company_logo" alt="">
@@ -21,11 +21,11 @@
           <span class="px-2">to</span>
           <span>{{ moment(session.end_date).format('LT') }}</span>
         </div>
-        <div class="flex space-x-3 border-t border-muted w-1/2 pt-2">
+        <div class="hidden group-focus:flex group-hover:flex space-x-3 w-1/2 pt-2 border-t border-muted   transition-all ease-in-out duration-300 ">
           <nuxt-link :to="{ name: 'session', params: { zoom_link: session.zoom_link } }"
-            class="inline-block rounded-xl bg-primary hover:bg-hover focus:translate-y-0.5 px-4 py-1.5 text-inverted font-semibold leading-7  shadow-sm ">{{ $t('join') }}</nuxt-link>
-          <button class="inline-block rounded-lg  px-4 py-1.5  font-semibold leading-7 focus:translate-y-0.5"
-            @click="remove_session(session.company_name)">{{ $t('dismiss') }}</button>
+            class="inline-block rounded-xl bg-primary hover:bg-hover focus:translate-y-0.5 px-4 py-1.5 text-inverted font-semibold leading-7  shadow-sm rtl:ml-2">{{ $t('join') }}</nuxt-link>
+          <button class="inline-block rounded-lg  px-4 py-1.5  font-semibold leading-7 hover:bg-muted2 dark:hover:bg-muted hover:brightness-150 focus:translate-y-0.5 cursor-pointer"
+            @click.stop="remove_session(session.company_name)">{{ $t('dismiss') }}</button>
         </div>
       </div>
 
@@ -71,6 +71,10 @@ export default {
     remove_session(name) {
       this.$store.commit('REMOVE_SESSION', name)
        setTimeout(function () { alert( 'session was removed'); }, 150);
+    },
+    setFocus(event){
+      console.log(event.target)
+      event.target.focus()
     }
   }
 }

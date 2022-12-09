@@ -5,14 +5,13 @@
         <div class="flex items-center justify-between py-6 md:justify-start md:space-x-10">
           <div class="flex justify-start lg:w-0 lg:flex-1">
             
-            <iconsQewamLogo></iconsQewamLogo>
+            <iconsQewamLogo class="invert-0"></iconsQewamLogo>
           </div>
 
-
           <div class="flex items-center justify-between space-x-2  ">
-            <button class="rtl:ml-2">
-                          <!-- <iconsSun class="text-active"></iconsSun> -->
-                          <iconsMoon class="text-base hover:text-muted" ></iconsMoon>
+            <button class="rtl:ml-2" @click="changeMode">
+                         <iconsMoon v-if="!darkMode"  class="text-base hover:text-muted" ></iconsMoon>
+                          <iconsSun v-else  class="text-base hover:text-muted"></iconsSun>
             </button>
 
             <button class="whitespace-nowrap text-base font-medium  hover:text-muted"
@@ -40,11 +39,14 @@ export default {
   data() {
     return {
       lang: this.$i18n.locale,
+      darkMode: localStorage.getItem('dark_mode')
     }
   },
 
   mounted() {
     this.$i18n.locale = this.lang = localStorage.getItem('lang') ?? 'en';
+    if(localStorage.getItem('dark_mode'))
+    document.documentElement.classList.add('dark')
   },
   methods: {
     changeLanguage() {
@@ -55,6 +57,14 @@ export default {
       html.setAttribute('dir', dir)
       html.setAttribute('lang', this.$i18n.locale)
     },
+    changeMode(){
+       this.darkMode = ! this.darkMode;
+       localStorage.setItem('dark_mode',this.darkMode)
+    
+       this.darkMode ? document.documentElement.classList.add('dark') : 
+       document.documentElement.classList.remove('dark')
+      
+    }
   },
 }
 </script>
