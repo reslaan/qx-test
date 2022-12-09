@@ -77,9 +77,12 @@
     --bg-row: #f0f0f0;
     --bg-muted2: #92929d;
     --bg-active: #e2f0ff;
-    --bg-hover: #f0f0f0;
+    --bg-hover: #7f6fe7;
     --bg-disabled: #e5e5e5;
     --bg-invertd: #121317;
+
+    --btn-primary: #9484F7;
+    --btn-secondary: #0758b5;
 
     --btn-primary: #9484F7;
     --btn-secondary: #0758b5;
@@ -103,7 +106,7 @@
     --bg-row: #f0f0f0;
     --bg-muted2: #92929d;
     --bg-active: #e2f0ff;
-    --bg-hover: #f0f0f0;
+    --bg-hover: #7f6fe7;
     --bg-disabled: #e5e5e5;
     --bg-invertd: #121317;
 

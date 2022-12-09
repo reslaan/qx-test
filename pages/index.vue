@@ -39,7 +39,9 @@ export default {
     }
   },
   head: {},
-  computed: {},
+  computed: {
+   
+  },
   watch: {},
   mounted() { },
   methods: {

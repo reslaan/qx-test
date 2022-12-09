@@ -1,7 +1,10 @@
 {
   "#####": "#########################################################",
   "language": "العربية",
-  "sar": "SAR",
-  "point": "Point",
-  "comming-sessions":"Upcoming Sessions"
+  "comming-sessions":"Upcoming Sessions",
+  "empty":"You have {action}  - start share a converstion with a mentor",
+  "no-sessions":"no upcoming sessions",
+  "join":"join",
+  "dismiss": "Dismiss"
+  
 }

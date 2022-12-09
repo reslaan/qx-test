@@ -5,12 +5,12 @@
  <div class="flex justify-between items-center text-center px-3 py-2 m-2  rounded-lg transition ease-in-out delay-150">
         <button @click="prev"  :class="currentSlides[0] === 0 ?'text-muted cursor-not-allowed':'active:-translate-x-0.5 rtl:active:translate-x-0.5'"><IconsChevLeft ></IconsChevLeft></button>
 
-        <div @click="passDay(day.date)" v-for="(day,index) in days" :key="day.date" v-show="currentSlides.includes(index)" 
+        <button @click="passDay(day.date)" v-for="(day,index) in days" :key="day.date" v-show="currentSlides.includes(index)" 
          
-          class="group w-1/4 desktop:w-24 p-2 flex flex-col items-center justify-center  border-2 border-muted hover:border-primary active:border-primary cursor-pointer rounded-xl ">
-          <h4 class="text-base group-hover:text-active group-active:text-active active">{{day.name}} </h4>
-          <span class="bg-muted group-active:bg-primary group-hover:bg-primary w-1/2 mt-1 text-muted group-active:text-inverted group-hover:text-inverted rounded-lg ">{{day.date}}</span>
-        </div>
+          class="group  w-1/4 desktop:w-24 p-2 flex flex-col items-center justify-center  border-2 border-muted hover:border-primary focus:border-primary cursor-pointer rounded-xl ">
+          <h4 class="text-base group-hover:text-active group-focus:text-active active">{{day.name}} </h4>
+          <span class="bg-muted group-focus:bg-primary group-hover:bg-primary w-1/2 mt-1 text-muted group-focus:text-inverted group-hover:text-inverted rounded-lg ">{{day.date}}</span>
+        </button>
        
         <button @click="next" :class="currentSlides[2] === 6 ?'text-muted cursor-not-allowed':'active:translate-x-0.5 rtl:active:-translate-x-0.5'"><IconsChevRight ></IconsChevRight></button>
       </div>
@@ -50,9 +50,7 @@ export default{
       this.currentSlides = this.currentSlides.map(i => i - 1 )
       console.log(this.currentSlides)
     },
-    selectDay(){
-
-    },
+    
     passDay(day)
     {
       this.$emit('selectedDay', day)

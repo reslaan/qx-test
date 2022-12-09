@@ -4,6 +4,10 @@
   "sar": "ريال",
   "point": "نقطة",
   "Start-from-here": "ابدأ من هنا",
-  "comming-sessions":"الجلسات القادمة"
+  "comming-sessions":"الجلسات القادمة",
+  "empty":"لا يوجد {action}  - إبدأ محادثة مع المرشد",
+  "no-sessions":"لديك جلسات قادمة",
+  "join":"انضمام",
+  "dismiss": "الغاء"
 
 }

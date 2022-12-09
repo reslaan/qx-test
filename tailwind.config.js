@@ -14,6 +14,7 @@ module.exports = {
       'muted-btn': 'var(--border-muted-btn)',
       primary: 'var(--border-primary)',
       inverted: 'var(--border-inverted)',
+      white:  'rgb(255 255 255)'
     }),
 
     screens: {

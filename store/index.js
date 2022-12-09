@@ -1,9 +1,8 @@
 // const lang = localStorage.setItem('lang','ar')
 import moment from 'moment';
-
 export default {
-  state:{
-    selected_day:'',
+  state:() => ({
+   zoom_link:'',
     days: [
         {
           name:moment().calendar().split("at")[0],
@@ -60,8 +59,8 @@ export default {
         company_logo:
           'https://img.freepik.com/premium-vector/saudi-arabia-tour-travel-logo-umrah-hajj-company-icon_18099-3718.jpg',
         company_description: 'The Evolution of A Revolution',
-        start_date: moment().add(1,'d').hours(11).minute(0),
-        end_date: moment().add(1,'d').hour(11).minute(30),
+        start_date: moment().add(5,'d').hours(11).minute(0),
+        end_date: moment().add(5,'d').hour(11).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
@@ -69,8 +68,8 @@ export default {
         company_logo:
           'https://miro.medium.com/max/936/1*dn6zull3VcGzGMVDdjYItA.jpeg',
         company_description: 'الشوبنغ لعبتنا - Shopping is our thing',
-        start_date: moment().add(1,'d').hours(13).minute(0),
-        end_date: moment().add(1,'d').hour(13).minute(30),
+        start_date: moment().add(6,'d').hours(13).minute(0),
+        end_date: moment().add(6,'d').hour(13).minute(30),
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
       {
@@ -134,11 +133,12 @@ export default {
         zoom_link: 'https://zoom.us/j/1234567890?pwd=1234567890',
       },
     ],
-  },
+  }),
   mutations:{
-      SET_DAY(state,day){
-      state.selected_day = ''
-      }
+    SET_ZOOM_LINK(state,link){
+      state.zoom_link = link
+      console.log('zoom loink')
+    }
   },
   actions:{
 
