@@ -87,35 +87,7 @@
     --btn-primary: #9484F7;
     --btn-secondary: #0758b5;
   }
-  .primary {
-    --text-base: #282C41;
-    --text-inverted: #E9EAF2;
-    --text-muted: #5B628A;
-    --text-active: #9484F7;
-    --text-disabled: #b4b4b4;
-    --text-error: #e7404d;
-
-    --border-muted: #f1f1f5;
-    --border-muted2: #92929d;
-    --border-muted-btn: #e5e5e5;
-    --border-primary: #9484F7;
-    --border-inverted: #000;
-
-    --bg-base: #fff;
-    --bg-muted: #f7f7f7;
-    --bg-row: #f0f0f0;
-    --bg-muted2: #92929d;
-    --bg-active: #e2f0ff;
-    --bg-hover: #7f6fe7;
-    --bg-disabled: #e5e5e5;
-    --bg-invertd: #121317;
-
-    --btn-primary: #9484F7;
-    --btn-secondary: #0758b5;
-
-    --btn-primary: #9484F7;
-    --btn-secondary: #0758b5;
-  }
+ 
 
   .dark {
     --text-base: #fff;
