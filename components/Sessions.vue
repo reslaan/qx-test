@@ -21,7 +21,7 @@
           <span class="px-2">to</span>
           <span>{{ moment(session.end_date).format('LT') }}</span>
         </div>
-        <div class="hidden group-focus:flex group-hover:flex space-x-3 w-1/2 pt-2 border-t border-muted   transition-all ease-in-out duration-300 ">
+        <div class="hidden group-focus:flex group-hover:flex space-x-3 w-1/2 pt-2 border-t border-muted   transition ease-in-out duration-1000 ">
           <nuxt-link :to="{ name: 'session', params: { zoom_link: session.zoom_link } }"
             class="inline-block rounded-xl bg-primary hover:bg-hover focus:translate-y-0.5 px-4 py-1.5 text-inverted font-semibold leading-7  shadow-sm rtl:ml-2">{{ $t('join') }}</nuxt-link>
           <button class="inline-block rounded-lg  px-4 py-1.5  font-semibold leading-7 hover:bg-muted2 dark:hover:bg-muted hover:brightness-150 focus:translate-y-0.5 cursor-pointer"

@@ -1,7 +1,7 @@
 <template>
 
     <div
-      class=" container mx-auto px-4 py-4 mt-4 w-full  bg-base border border-muted rounded-lg shadow mobile:rounded-lg  tablet:w-3/4 desktop:max-w-screen-desktop">
+      class=" container mx-auto px-4 py-4 mt-4 w-full  bg-base border border-muted rounded-lg shadow mobile:rounded-lg  tablet:w-3/4 desktop:max-w-screen-desktop transition-all duration-300">
       <div class="flex justify-between items-center px-3 py-1.5  hover:bg-muted m-2 transition-all rounded-lg">
         <div class="leading-tight">
           <h3 class="font-semibold">{{$t('comming-sessions')}}</h3>

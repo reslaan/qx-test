@@ -19,7 +19,7 @@
     <client-only>
 
 
-      <div class="flex flex-col justify-center bg-base text-base min-h-screen transition-all ">
+      <div class="flex flex-col justify-center bg-base text-base min-h-screen transition-all duration-300">
         <Nav  />
         <Nuxt />
       </div>

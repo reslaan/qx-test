@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-<div class="flex flex-col space-y-4 justify-center items-center h-96 py-4 ">
+<div class="flex flex-col text-center space-y-4 justify-center items-center h-96 py-4 ">
   <iconsZoom  v-show=" zoom_link" class="w-16"></iconsZoom>
   <a :href=" zoom_link" class="hover:text-active bg-muted px-2 py-0.5 rounded-md">{{ zoom_link}}</a>
 </div>
